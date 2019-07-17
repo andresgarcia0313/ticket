@@ -89,6 +89,3 @@ class BaseDeDatos extends mysqli {
     }
 
 }
-
-/*$ObjBD = new BaseDeDatos("SELECT 'Conectado a DB sss' AS mensaje FROM DUAL");
-print_r($ObjBD->resultado());*/

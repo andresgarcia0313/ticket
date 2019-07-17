@@ -1,0 +1,20 @@
+div {
+  width: 88%;
+  padding: 3%;
+  margin: 3%;
+  background: linear-gradient(135deg, rgba(240,240,240,1) 0%, rgba(255,255,255,1) 50%, rgba(240,240,240,1) 100%);
+  border-radius: 20px;
+}
+body{
+    font-family: sans-serif;
+    
+}
+h1{
+    text-align: center;
+}
+footer{
+    text-align: center;
+}
+nav{
+    text-align: center;
+}
