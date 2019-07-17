@@ -26,13 +26,13 @@ class Usuario {
         if ($this->validarusuario()) {
             session_start();
             $_SESSION['Usuario'] = $_POST['correo'];
-            header("location: ticket.html");
+            header("location: home.php");
         } else {
+            echo "Contraseña o Cuenta Incorrecta";
             session_destroy();
-            header("location: index.html");
+            header("location: index.php");
         };
     }
-
     public function validarusuario() {
         $this->clave;
         $this->correo;
