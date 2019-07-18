@@ -1,6 +1,6 @@
 <?php
 
-include_once 'basededatos.php';
+include_once './classBaseDeDatos.php';
 
 class Usuario {
 
@@ -17,7 +17,7 @@ class Usuario {
             session_start();
             $_SESSION['usuario'] = $this->correo;
             
-            header("location: inicio.php");
+            header("location: interfazinicio.php");
         } else {
             echo "Contraseña o Cuenta Incorrecta";
             session_destroy();

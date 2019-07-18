@@ -1,10 +1,9 @@
 <?php
-include_once 'cabeceraweb.php';
+include_once './interfazCabeceraweb.php';
 ?>
 <div>
     <h1>Crear Ticket</h1>
-    <form name="Crear Ticket" action="crearticket.php" method="POST" autocomplete="off"
-          enctype="text/plain" target="Crear Ticket">
+    <form name="Crear Ticket" action="crearticket.php" method="POST" autocomplete="off" target="Crear Ticket">
         <p><select name="central" required="required">
             <option value="TEQUENDAMA" selected="selected">TEQUENDAMA</option>
         </select></p>
@@ -16,7 +15,7 @@ include_once 'cabeceraweb.php';
         <p><input name="correo" required="required" maxlength="100" autocomplete="off" type="email" placeholder="correo"></p>
         <p><input name="medidor" required="required" size="10" maxlength="10" autocomplete="off" type="text" placeholder="medidor"></p>
         <p><select name="tipoTicket" required="required">
-            <option value="" disabled="disabled" selected="selected">Eligir Tipo De Ticket</option>
+            <option value="" disabled="disabled" selected="selected">Elegir Tipo De Ticket</option>
             <option value="Emergencia">Emergencia</option>
             <option value="Falla Intermitente">Falla Intermitente</option>
             <option value="Falla Permanente">Falla Permanente</option>
@@ -25,10 +24,12 @@ include_once 'cabeceraweb.php';
             <option value="Otro">Otro</option>
         </select></p>
         <p><textarea name="solicitud" cols="30" rows="4" required="required" maxlength="255" wrap="soft" placeholder="Ingrese titulo de la solicitud"></textarea></p>
-        <p><textarea name="incidencia" cols="30" rows="10" required="required" maxlength="4000" wrap="soft"></textarea></p>
+        <p><textarea name="incidencia" cols="30" rows="10" required="required" maxlength="4000" wrap="soft" placeholder="Ingrese Descripción de la incidencia"></textarea></p>
+        Por favor lo archivos se deben comprimir y dejar en un solo archivo
+        Si no sabe como hacerlo dejamos el siguiente <a href="https://support.microsoft.com/es-co/help/4028088/windows-zip-and-unzip-files">Click Aquí</a>
         <p><input name="archivo" type="file"></p>
         <p><input name="enviar" formmethod="post" type="submit"></p>
     </form>
 </div>
 <?php
-include_once 'piedepaginaweb.php';
+include_once './interfazPiedepaginaweb.php';

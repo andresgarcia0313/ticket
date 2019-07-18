@@ -10,11 +10,11 @@
     <base href="http://localhost/ticket/" />
     <div>
         <nav>
-            <a href="inicio.php">Inicio</a> |
-            <a href="ticketCrear.php">Crear Ticket</a> |
-            <a href="gestionarticket.php">Gestionar Tickets</a> |
-            <a href="listarticket.php">Listar Tickets</a> |
-            <a href="usuariosalir.php">Salir</a> 
+            <a href="interfazInicio.php">Inicio</a> |
+            <a href="interfazTicketCrear.php">Crear Ticket</a> |
+            <a href="interfazInicio.php">Gestionar Tickets</a> |
+            <a href="interfazInicio.php">Listar Tickets</a> |
+            <a href="LogicaUsuarioSalir.php">Salir</a> 
         </nav>
     </div>
     <?php

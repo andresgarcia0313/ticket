@@ -1,5 +1,5 @@
 <?php
-include_once 'cabeceraweb.php';
+include_once './interfazCabeceraweb.php';
 ?>
 <div>
     Bienvenido
@@ -28,4 +28,4 @@ include_once 'cabeceraweb.php';
 </p>
 </div>
 <?php
-include_once 'piedepaginaweb.php';
+include_once './interfazPiedepaginaweb.php';
