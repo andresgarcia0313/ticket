@@ -1,5 +1,5 @@
 <?php
-include_once 'basededatos.php';
+include_once './classBaseDeDatos.php';
 class classticket {
     /**@var string Código utilizado como consecutivo dentro del sistema*/
     public function __construct(){
