@@ -28,7 +28,7 @@ include_once './interfazCabeceraweb.php';
         Por favor lo archivos se deben comprimir y dejar en un solo archivo
         Si no sabe como hacerlo dejamos el siguiente <a href="https://support.microsoft.com/es-co/help/4028088/windows-zip-and-unzip-files">Click Aquí</a>
         <p>La subida de archivos está desactivada hasta que se validen las pruebas<br><input name="archivo" type="file" disabled></p>
-        <p><input name="enviar" formmethod="post" type="submit"></p>
+        <p><input formmethod="post" type="submit"></p>
     </form>
 </div>
 <?php

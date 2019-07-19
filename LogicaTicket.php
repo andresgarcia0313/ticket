@@ -6,7 +6,9 @@ include_once './classTicket.php';
  * and open the template in the editor.
  */
 
-print_r(filter_input_array(INPUT_POST));
+$datosTicket=filter_input_array(INPUT_POST);
+$objTicket= new ticket($datosTicket);
+
 /*
  *
  * Se dejan a continuación los datos a manejar
