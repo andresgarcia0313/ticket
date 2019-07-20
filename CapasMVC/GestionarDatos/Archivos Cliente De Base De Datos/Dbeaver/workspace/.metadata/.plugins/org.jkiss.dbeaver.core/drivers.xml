@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<drivers>
+	<provider id="wmi"/>
+	<provider id="athena"/>
+	<provider id="bigquery"/>
+	<provider id="db2"/>
+	<provider id="db2_zos"/>
+	<provider id="db2_i"/>
+	<provider id="elasticsearch"/>
+	<provider id="exasol"/>
+	<provider id="jaybird"/>
+	<provider id="generic"/>
+	<provider id="greenplum"/>
+	<provider id="sqlserver"/>
+	<provider id="mssql"/>
+	<provider id="mysql">
+		<driver id="mariaDB" categories="sql" custom="false" embedded="false" name="MariaDB" class="org.mariadb.jdbc.Driver" url="jdbc:mariadb://{host}[:{port}]/[{database}]" port="3306" description="MariaDB JDBC driver">
+			<library type="jar" path="maven:/org.mariadb.jdbc:mariadb-java-client:RELEASE" custom="false" version="1.5.5">
+				<file id="org.mariadb.jdbc:mariadb-java-client" version="1.5.5" path="${home}\.dbeaver-drivers\maven\maven-central\org.mariadb.jdbc\mariadb-java-client-1.5.5.jar"/>
+			</library>
+		</driver>
+	</provider>
+	<provider id="oracle"/>
+	<provider id="postgresql"/>
+	<provider id="snowflake"/>
+	<provider id="vertica"/>
+</drivers>

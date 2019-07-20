@@ -1,13 +1,13 @@
 <?php
 include_once './classTicket.php';
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
-$datosTicket=filter_input_array(INPUT_POST);
-$objTicket= new ticket($datosTicket);
+$datosFormulario=filter_input_array(INPUT_POST);
+/**
+ * @var ticket $objTicket Arreglo el cual se crea con todos los datos del 
+ * formulario de interfazTicketCrear.php
+ */
+$objTicket= new ticket($datosFormulario);
+$objTicket->guardar();
 
 /*
  *

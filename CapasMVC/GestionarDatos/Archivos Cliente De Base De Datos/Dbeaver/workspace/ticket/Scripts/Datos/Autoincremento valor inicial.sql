@@ -1,0 +1,1 @@
+ALTER TABLE ticket AUTO_INCREMENT = 1;

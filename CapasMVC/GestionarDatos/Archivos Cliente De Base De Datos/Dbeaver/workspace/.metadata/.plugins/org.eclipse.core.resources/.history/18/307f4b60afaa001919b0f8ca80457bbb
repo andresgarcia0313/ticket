@@ -1,0 +1,26 @@
+insert
+	into
+		ticket.ticket ( central,
+		tipo_ticket,
+		solicitud,
+		descripsion,
+		medidor,
+		estado,
+		nombres,
+		apellidos,
+		telefono,
+		ext,
+		celular,
+		correo )
+	values('TEQUENDAMA',
+	'Otro',
+	'fsdgdf',
+	'sdfgsdfg',
+	'AKT-59C',
+	'Abierto',
+	'Andrés Eduardo',
+	'Márquez',
+	'012456984',
+	'123',
+	'3012456984',
+	'andresgarcia0313@gmail.com');

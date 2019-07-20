@@ -13,7 +13,7 @@
             <a href="interfazInicio.php">Inicio</a> |
             <a href="interfazTicketCrear.php">Crear Ticket</a> |
             <a href="interfazInicio.php">Gestionar Tickets</a> |
-            <a href="interfazInicio.php">Listar Tickets</a> |
+            <a href="interfazTicketLista.php">Listar Tickets</a> |
             <a href="LogicaUsuarioSalir.php">Salir</a> 
         </nav>
     </div>

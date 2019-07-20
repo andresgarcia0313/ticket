@@ -46,6 +46,7 @@ class BaseDeDatos extends mysqli {
      */
     function __construct($sql) {
         $return = parent::__construct($this->host, $this->username, $this->passwd, $this->dbname, $this->port, $this->socket);
+        parent::set_charset("utf8");
         $this->consultar($sql);
     }
 
@@ -59,10 +60,14 @@ class BaseDeDatos extends mysqli {
         /* Instancia de mysqli_result con resultados obtenidos */
         $this->ObjMysqliResult = $this->query($sql);
         /* Extrae todo en un array php */
-        $this->arrayResultado = $this->ObjMysqliResult->fetch_all(MYSQLI_BOTH);
-        $this->ObjMysqliResult->free();
-        $this->close();
-        return $this->arrayResultado;
+        if ("INSERT" == substr($sql, 0, 6)) {
+            $this->close();
+            return void;
+        } else {
+            $this->arrayResultado = $this->ObjMysqliResult->fetch_all(MYSQLI_BOTH);
+            $this->close();
+            return $this->arrayResultado;
+        }
     }
 
     /**

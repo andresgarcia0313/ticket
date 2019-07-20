@@ -11,7 +11,7 @@
 		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-18|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
 	</section>
 	<section name="DBeaver.StandardErrorDialog">
-		<item key="showDetails" value="false"/>
+		<item key="showDetails" value="true"/>
 		<item key="DIALOG_X_ORIGIN" value="587"/>
 		<item key="DIALOG_Y_ORIGIN" value="451"/>
 		<item key="DIALOG_WIDTH" value="1173"/>
@@ -23,6 +23,88 @@
 		<item key="DIALOG_Y_ORIGIN" value="469"/>
 		<item key="DIALOG_WIDTH" value="374"/>
 		<item key="DIALOG_HEIGHT" value="216"/>
+		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-18|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+	</section>
+	<section name="DriverDownload">
+	</section>
+	<section name="DBeaver.DriverDownloadDialog">
+		<item key="DIALOG_X_ORIGIN" value="0"/>
+		<item key="DIALOG_Y_ORIGIN" value="0"/>
+		<item key="DIALOG_WIDTH" value="875"/>
+		<item key="DIALOG_HEIGHT" value="742"/>
+		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-18|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+	</section>
+	<section name="ResultSetViewer">
+		<section name="presentations">
+			<section name="spreadsheet">
+				<item key="enabledPanelIds" value="value-view"/>
+				<item key="activePanelId" value="value-view"/>
+				<item key="panelRatio" value="142"/>
+				<item key="panelsVisible" value="true"/>
+				<item key="verticalLayout" value="false"/>
+			</section>
+			<section name="plaintext">
+				<item key="enabledPanelIds" value="value-view"/>
+				<item key="activePanelId" value="value-view"/>
+				<item key="panelRatio" value="300"/>
+				<item key="panelsVisible" value="true"/>
+				<item key="verticalLayout" value="false"/>
+			</section>
+		</section>
+		<section name="ErrorPresentation">
+			<item key="errorWidth" value="605:388"/>
+		</section>
+	</section>
+	<section name="DBeaver.QM.LogViewer">
+		<item key="column-time" value="150"/>
+		<item key="column-type" value="150"/>
+		<item key="column-text" value="531"/>
+		<item key="column-duration" value="164"/>
+		<item key="column-datasource" value="176"/>
+	</section>
+	<section name="DBeaver.SelectDataSourceDialog">
+		<item key="showAllProjects" value="false"/>
+		<item key="showConnected" value="true"/>
+		<item key="DIALOG_X_ORIGIN" value="961"/>
+		<item key="DIALOG_Y_ORIGIN" value="85"/>
+		<item key="DIALOG_WIDTH" value="404"/>
+		<item key="DIALOG_HEIGHT" value="793"/>
+		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-18|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+	</section>
+	<section name="DBeaver.ViewSQLDialog">
+		<item key="GenerateSQL.compactSQL" value="true"/>
+		<item key="DIALOG_X_ORIGIN" value="11"/>
+		<item key="DIALOG_Y_ORIGIN" value="11"/>
+		<item key="DIALOG_WIDTH" value="1920"/>
+		<item key="DIALOG_HEIGHT" value="986"/>
+		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-18|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+	</section>
+	<section name="GenerateMultiSQLDialog.MySQLToolAnalyse$SQLDialog">
+		<item key="DIALOG_X_ORIGIN" value="895"/>
+		<item key="DIALOG_Y_ORIGIN" value="404"/>
+		<item key="DIALOG_WIDTH" value="537"/>
+		<item key="DIALOG_HEIGHT" value="314"/>
+		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-18|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+	</section>
+	<section name="SQLScriptStatusDialog">
+		<item key="DIALOG_X_ORIGIN" value="869"/>
+		<item key="DIALOG_Y_ORIGIN" value="309"/>
+		<item key="DIALOG_WIDTH" value="588"/>
+		<item key="DIALOG_HEIGHT" value="457"/>
+		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-18|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+	</section>
+	<section name="GenerateMultiSQLDialog.MySQLToolCheck$SQLDialog">
+		<item key="DIALOG_X_ORIGIN" value="895"/>
+		<item key="DIALOG_Y_ORIGIN" value="333"/>
+		<item key="DIALOG_WIDTH" value="537"/>
+		<item key="DIALOG_HEIGHT" value="420"/>
+		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-18|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+	</section>
+	<section name="GenerateMultiSQLDialog.MySQLToolOptimize$SQLDialog">
+		<item key="DIALOG_X_ORIGIN" value="895"/>
+		<item key="DIALOG_Y_ORIGIN" value="404"/>
+		<item key="DIALOG_WIDTH" value="537"/>
+		<item key="DIALOG_HEIGHT" value="314"/>
 		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-18|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
 	</section>
 </section>
