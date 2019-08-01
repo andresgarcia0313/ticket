@@ -1,0 +1,81 @@
+{
+  "id": "0ea28278-7198-4c16-90a8-c041728e9d95",
+  "version": "2.0",
+  "name": "Ticket",
+  "url": "http://localhost/ticket/index.php",
+  "tests": [{
+    "id": "1bfa9b78-f2af-457c-a810-87b9bdfebd11",
+    "name": "Untitled",
+    "commands": []
+  }, {
+    "id": "f047823e-3812-450e-81cb-03b36ec68f9e",
+    "name": "Iniciar Sesión",
+    "commands": [{
+      "id": "a4458a5d-59df-418d-bcce-68beeaf9dc43",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost/ticket/index.php",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b25ef00f-8b21-4103-b5ea-df3f19890401",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "783x804",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7893f636-25af-49b7-94ee-a877ac1fb672",
+      "comment": "",
+      "command": "click",
+      "target": "name=correo",
+      "targets": [
+        ["name=correo", "name"],
+        ["css=p:nth-child(1) > input", "css:finder"],
+        ["xpath=//input[@name='correo']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4aac389e-8347-4823-bb64-bfcd90eb74b5",
+      "comment": "",
+      "command": "click",
+      "target": "name=correo",
+      "targets": [
+        ["name=correo", "name"],
+        ["css=p:nth-child(1) > input", "css:finder"],
+        ["xpath=//input[@name='correo']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "247ea960-71de-498b-826e-63e30c6e77f1",
+      "comment": "",
+      "command": "click",
+      "target": "css=input:nth-child(3)",
+      "targets": [
+        ["css=input:nth-child(3)", "css:finder"],
+        ["xpath=//input[@value='Acceder']", "xpath:attributes"],
+        ["xpath=//form/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "63c30e4b-1ee2-4685-85b6-ae319130d75e",
+      "comment": "",
+      "command": "assert",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "94ea22e0-8779-4f26-b17d-328c0bcfc64e",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["1bfa9b78-f2af-457c-a810-87b9bdfebd11"]
+  }],
+  "urls": ["http://localhost/ticket/index.php"],
+  "plugins": []
+}

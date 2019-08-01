@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data-sources>
+	<folder name="Desarrollo"/>
+	<data-source id="mariaDB-16c0c8ae8c4-3c818c7de0ad4646" provider="mysql" driver="mariaDB" name="MariaDB - ticket" save-password="true" read-only="false" folder="Desarrollo">
+		<connection host="localhost" port="3306" server="" database="ticket" url="jdbc:mysql://localhost:3306/ticket" user="root" password="RFVWdCGi" type="dev">
+			<network-handler type="CONFIG" id="mysql_ssl" enabled="false" save-password="true">
+				<property name="ssl.public.key.retrieve" value="false"/>
+				<property name="ssl.verify.server" value="true"/>
+				<property name="ssl.require" value="false"/>
+			</network-handler>
+			<network-handler type="TUNNEL" id="ssh_tunnel" enabled="false" save-password="true">
+				<property name="sshConnectTimeout" value="10000"/>
+				<property name="port" value="22"/>
+				<property name="implementation" value="jsch"/>
+				<property name="authType" value="PASSWORD"/>
+			</network-handler>
+			<network-handler type="PROXY" id="socks_proxy" enabled="false" save-password="true">
+				<property name="socks-port" value="1080"/>
+			</network-handler>
+		</connection>
+	</data-source>
+	<filters/>
+</data-sources>

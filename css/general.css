@@ -4,6 +4,7 @@ div {
     margin: 3%;
     background: linear-gradient(135deg, rgba(240,240,240,1) 0%, rgba(255,255,255,1) 50%, rgba(240,240,240,1) 100%);
     border-radius: 20px;
+    box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.5);
 }
 body{
     font-family: sans-serif;
@@ -18,13 +19,22 @@ footer{
 nav{
     text-align: center;
 }
+nav a{
+    background: linear-gradient(to bottom, #b9c9fe 0%, #FFFFFF 50%, #b9c9fe 100%);
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 22px;
+    box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.71);
+}
+nav a:hover{
+    background: linear-gradient(to bottom, #b9c9fe 0%, #FFFFFF 50%, #b9c9fe 100%);
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 22px;
+    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.71);
+}
 
-input[type=text], 
-input[type=password],
-input[type=tel], 
-input[type=email],
-textarea,
-select{
+input[type=text], input[type=password],input[type=tel],input[type=email],textarea,select{
     display: inline-block;
     width: 100%;
     height: 25px;
@@ -40,4 +50,40 @@ select{
 }
 textarea{
     height: 150px;
+}
+table {     
+    font-size: 10px;      
+    width: 100%; 
+    text-align: center;    
+    border-collapse: collapse;
+    box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.5);
+}
+th {     
+    font-size: 11px;     
+    font-weight: 900;       
+    background: #b9c9fe;
+    border-top: 4px solid #aabcfe;    
+    border-bottom: 2px solid #fff; 
+    color: #039; 
+    padding: 25px 3px 25px 3px;
+    box-shadow: inset 1px 0px 1px 0px #FFFFFF;
+}
+
+td { 
+    font-size: 10px;
+    padding: 13px 3px 13px 3px;
+    background: #e8edff;     
+    border-bottom: 1px solid #fff;
+    color: #669;   
+    border-top: 1px solid transparent;
+    box-shadow: inset 1px 0px 1px 0px #FFFFFF;
+}
+tr:hover td { 
+    background: #d0dafd; 
+    color: #339; 
+   
+}
+td:hover{ 
+    box-shadow: inset 0px 0px 3px 0px #FFFFFF;
+    border: 1px #990000;
 }

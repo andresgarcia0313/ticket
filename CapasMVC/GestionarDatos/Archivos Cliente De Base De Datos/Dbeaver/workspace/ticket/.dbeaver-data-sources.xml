@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<data-sources>
-	<folder name="Desarrollo"/>
-	<data-source id="mariaDB-16c0c8ae8c4-3c818c7de0ad4646" provider="mysql" driver="mariaDB" name="MariaDB - ticket" save-password="true" read-only="false" folder="Desarrollo">
-		<connection host="localhost" port="3306" server="" database="ticket" url="jdbc:mysql://localhost:3306/ticket" user="root" password="RFVWdCGi" type="dev"/>
-	</data-source>
-	<filters/>
-</data-sources>

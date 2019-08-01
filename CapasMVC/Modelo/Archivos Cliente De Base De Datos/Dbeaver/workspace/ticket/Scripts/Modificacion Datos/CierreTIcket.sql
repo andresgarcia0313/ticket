@@ -1,0 +1,1 @@
+UPDATE ticket SET cierre=now();

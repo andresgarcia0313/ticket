@@ -1,0 +1,19 @@
+{
+    "name": "vendor/ticket",
+    "description": "Description of project ticket: Aplicacion para realizar ticket de soporte",
+    "authors": [
+        {
+            "name": "Andres Eduardo Garcia Marquez",
+            "email": "andresgarcia0313@gmail.com"
+        }
+    ],
+    "minimum-stability":"stable",    
+    "autoload": {
+        "classmap": [
+            "src/"
+        ]
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8"
+    }
+}

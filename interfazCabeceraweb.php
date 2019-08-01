@@ -11,9 +11,9 @@
     <div>
         <nav>
             <a href="interfazInicio.php">Inicio</a> |
-            <a href="interfazTicketCrear.php">Crear Ticket</a> |
-            <a href="interfazInicio.php">Gestionar Tickets</a> |
-            <a href="interfazTicketLista.php">Listar Tickets</a> |
+            <a href="interfazTicketCrear.php">Crear</a> |
+            <a href="interfazInicio.php">Gestionar</a> |
+            <a href="interfazTicketLista.php">Listar</a> |
             <a href="LogicaUsuarioSalir.php">Salir</a> 
         </nav>
     </div>
