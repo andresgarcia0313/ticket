@@ -15,7 +15,7 @@
  * enviarle una copia.
  *
  * @category   Ticket
- * @package    Root
+ * @package    Modelo
  * @author     Andres Eduardo Garcia Marquez <andresgarcia0313@gmail.com>
  * @copyright  2019 The Andres Eduardo Garcia Marquez Group
  * @license    http://www.andresgarcia.xyz Andres Garcia License 0.01
@@ -38,7 +38,7 @@ require_once '../Modelo/BaseDeDatos.php';
  * Larga descripsiòn para la clase: Gestiòn de informaciòn de tickets
  *
  * @category   Class
- * @package    Root
+ * @package    Modelo
  * @author     Andres Eduardo Garcia Marquez <andresgarcia0313@gmail.com>
  * @copyright  2019 The Andres Eduardo Garcia Marquez Group
  * @license    http://www.andresgarcia.xyz Andres Garcia License 0.01

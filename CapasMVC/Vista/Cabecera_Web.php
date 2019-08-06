@@ -3,7 +3,7 @@
     <head>
         <meta http-equiv="content-type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="StyleSheet" href="css/general.css" type="text/css">
+        <link rel="StyleSheet" href="CapasMVC/Vista/css/general.css" type="text/css">
         <title>Crear Ticket</title>
     </head>
     <body>
