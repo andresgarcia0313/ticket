@@ -1,0 +1,64 @@
+    1  git clone https://github.com/andresgarcia0313/ticket.git
+    2  git clone git@github.com:andresgarcia0313/ticket.git
+    3  git clone git@github.com:andresgarcia0313/ticket.git
+    4  git clone https://github.com/andresgarcia0313/ticket.git
+    5  cd ticket/
+    6  git add Scripts/dump-ticket-201907161357.sql
+    7  git commit -m "se agrega dump-ticket-201907161357"
+    8  git push
+    9  git pull
+   10  git pull origin master
+   11  git branch
+   12  git branch -a
+   13  git branch -r
+   14  git checkout master
+   15  git branch
+   16  git add *
+   17  git add .
+   18  git commit -m "se crea estructura de menu con permisos"
+   19  git pull origin master
+   20  git branch -a
+   21  git push origin master
+   22  git branch -a
+   23  git commit -m "se elimina Ticket.html"
+   24  git push origin master
+   25  git commit -m "se agrega a gitignore nbnetbeans"
+   26  git add .gitignore 
+   27  git commit -m "se agrega a gitignore nbnetbeans"
+   28  git push origin master
+   29  git pull origin master
+   30  git brach
+   31  git branh
+   32  git branch
+   33  git branch -a
+   34  git commit -m "se crea la sesión para todo el sistema, se crea menu principal, se corrigen defectos"
+   35  git push origin master
+   36  git commit -m "se comienza la clase de ticket y se agrega diseño inicial de bd"
+   37  git add .
+   38  git push origin master
+   39  git commit -m "se agregan archivos para el anterior commit"
+   40  git push origin master
+   41  git commit -m "se modifican archivos internos se agregan script de base de datos y se alista para comenzar con la funcionalidad de crear ticket"
+   42  git add .
+   43  git commit -m "se modifican archivos internos se agregan script de base de datos y se alista para comenzar con la funcionalidad de crear ticket"
+   44  git push origin master
+   45  git commit -m "Se soluciona seguridad de utilizar $_POST directo"
+   46  git add LogicaTicket.php 
+   47  git commit -m "Se soluciona seguridad de utilizar $_POST directo"
+   48  git push origin master
+   49  git add .
+   50  git commit -m "Se agrega modelo de datos en sql"
+   51  git push origin maste
+   52  git push origin master
+   53  git add .
+   54  git commit -m "se unifica proyectos de dbeaver mysql workbeanch y de netbeans en un unico repositorio"
+   55  git push origin master
+   56  git add .
+   57  git commit -m "Se realiza funcionalidad de almacenado de ticket y se comienza con listar"
+   58  git push origin master
+   59  git clone https://github.com/WordPress/WordPress.git
+   60  history
+   61  git add .
+   62  git add .
+   63  git commit -m "No funcional se comienza a hacer el cierreticket y alterar la estructura para separar en paquetes o carpetas MVC"
+   64  history >comandosgit.txt

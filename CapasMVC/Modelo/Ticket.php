@@ -167,6 +167,246 @@ class Ticket
     }
 
     /**
+     * Obtener Variable Del Objeto
+     * 
+     * @return integer
+     */
+    function get_id()
+    {
+        return $this->_id;
+    }
+
+    /**
+     * Obtener Variable Del Objeto
+     * 
+     * @return string
+     */
+    function get_central()
+    {
+        return $this->_central;
+    }
+
+    /**
+     * Obtener Variable Del Objeto
+     * 
+     * @return type
+     */
+    function get_nombresSolicitante()
+    {
+        return $this->_nombresSolicitante;
+    }
+
+    /**
+     * Obtener Variable Del Objeto
+     * 
+     * @return type
+     */
+    function get_apellidosSolicitante()
+    {
+        return $this->_apellidosSolicitante;
+    }
+
+    /**
+     * Obtener Variable Del Objeto
+     * 
+     * @return type
+     */
+    function get_telefonoFijo()
+    {
+        return $this->_telefonoFijo;
+    }
+
+    /**
+     * Obtener Variable Del Objeto
+     * 
+     * @return type
+     */
+    function get_telefonoFijoExt()
+    {
+        return $this->_telefonoFijoExt;
+    }
+
+    /**
+     * Obtener Variable Del Objeto
+     * 
+     * @return type
+     */
+    function get_telefonoMovil()
+    {
+        return $this->_telefonoMovil;
+    }
+
+    /**
+     * Obtener Variable Del Objeto
+     * 
+     * @return type
+     */
+    function get_correo()
+    {
+        return $this->_correo;
+    }
+
+    /**
+     * Obtener Variable Del Objeto
+     * 
+     * @return type
+     */
+    function get_medidor()
+    {
+        return $this->_medidor;
+    }
+
+    /**
+     * Obtener Variable Del Objeto
+     * 
+     * @return type
+     */
+    function get_tipoTicket()
+    {
+        return $this->_tipoTicket;
+    }
+
+    /**
+     * Obtener Variable Del Objeto
+     * 
+     * @return type
+     */
+    function get_solicitud()
+    {
+        return $this->_solicitud;
+    }
+
+    /**
+     * Obtener Variable Del Objeto
+     * 
+     * @return type
+     */
+    function get_incidencia()
+    {
+        return $this->_incidencia;
+    }
+
+    /**
+     * Establecer Variable Del Objeto
+     * 
+     * @param type $_id
+     */
+    function set_id($_id)
+    {
+        $this->_id = $_id;
+    }
+
+    /**
+     * Establecer Variable Del Objeto
+     * 
+     * @param type $_central
+     */
+    function set_central($_central)
+    {
+        $this->_central = $_central;
+    }
+
+    /**
+     * Establecer Variable Del Objeto
+     * 
+     * @param type $_nombresSolicitante
+     */
+    function set_nombresSolicitante($_nombresSolicitante)
+    {
+        $this->_nombresSolicitante = $_nombresSolicitante;
+    }
+
+    /**
+     * Establecer Variable Del Objeto
+     * 
+     * @param type $_apellidosSolicitante
+     */
+    function set_apellidosSolicitante($_apellidosSolicitante)
+    {
+        $this->_apellidosSolicitante = $_apellidosSolicitante;
+    }
+
+    /**
+     * Establecer Variable Del Objeto
+     * 
+     * @param type $_telefonoFijo
+     */
+    function set_telefonoFijo($_telefonoFijo)
+    {
+        $this->_telefonoFijo = $_telefonoFijo;
+    }
+
+    /**
+     * Establecer Variable Del Objeto
+     * 
+     * @param type $_telefonoFijoExt
+     */
+    function set_telefonoFijoExt($_telefonoFijoExt)
+    {
+        $this->_telefonoFijoExt = $_telefonoFijoExt;
+    }
+
+    /**
+     * Establecer Variable Del Objeto
+     * 
+     * @param type $_telefonoMovil
+     */
+    function set_telefonoMovil($_telefonoMovil)
+    {
+        $this->_telefonoMovil = $_telefonoMovil;
+    }
+
+    /**
+     * Establecer Variable Del Objeto
+     * 
+     * @param type $_correo
+     */
+    function set_correo($_correo)
+    {
+        $this->_correo = $_correo;
+    }
+
+    /**
+     * Establecer Variable Del Objeto
+     * 
+     * @param type $_medidor
+     */
+    function set_medidor($_medidor)
+    {
+        $this->_medidor = $_medidor;
+    }
+
+    /**
+     * Establecer Variable Del Objeto
+     * 
+     * @param type $_tipoTicket
+     */
+    function set_tipoTicket($_tipoTicket)
+    {
+        $this->_tipoTicket = $_tipoTicket;
+    }
+
+    /**
+     * Establecer Variable Del Objeto
+     * 
+     * @param type $_solicitud
+     */
+    function set_solicitud($_solicitud)
+    {
+        $this->_solicitud = $_solicitud;
+    }
+
+    /**
+     * Establecer Variable Del Objeto
+     * 
+     * @param type $_incidencia
+     */
+    function set_incidencia($_incidencia)
+    {
+        $this->_incidencia = $_incidencia;
+    }
+
+    /**
      * Almacena en la base de datos los datos del objeto provisto por el 
      * contructor
      * 
@@ -189,6 +429,7 @@ class Ticket
                 . "'$this->_telefonoFijo', '$this->_telefonoFijoExt', "
                 . "'$this->_telefonoMovil', '$this->_correo');";
         $objdb = new BaseDeDatos($sql);
+        unset($objdb);
         header("location: interfazTicketLista.php");
     }
 
@@ -215,11 +456,14 @@ class Ticket
         $sql = "UPDATE ticket SET cierre=now() where id=" . $id . ";";
         echo $sql;
         $objdb = new BaseDeDatos($sql);
-        
+        return $objdb->query($sql);
     }
 
 }
 
+/*
+ * Test ejecución cerrarTicket
 echo "Hola Mundo<p>";
 $objTicket = new Ticket();
 $objTicket->cerrarTicket(11);
+*/
