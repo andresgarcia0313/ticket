@@ -1,0 +1,22 @@
+Ruta Global de composer la cual se debe agregar al path
+C:\Users\agarcia220\AppData\Roaming\Composer\vendor
+Posibles Comandos Para Instalar
+
+$ composer global require phpunit/phpunit
+$ composer global require phpunit/dbunit
+$ composer global require phing/phing
+$ composer global require phpdocumentor/phpdocumentor
+$ composer global require sebastian/phpcpd
+$ composer global require phploc/phploc
+$ composer global require phpmd/phpmd
+$ composer global require squizlabs/php_codesniffer
+$ composer global require "phpdocumentor/phpdocumentor:2.*"
+
+Desinstalar 
+
+
+Referencias
+    https://akrabat.com/global-installation-of-php-tools-with-composer/
+    https://getcomposer.org/doc/03-cli.md#global
+    https://www.rephp.com/como-eliminar-globalmente-un-paquete-de-composer.html
+    https://docs.phpdoc.org/getting-started/installing.html

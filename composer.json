@@ -1,5 +1,5 @@
 {
-    "name": "vendor/ticket",
+    "name": "andresgarcia0313/ticket",
     "description": "Description of project ticket: Aplicacion para realizar ticket de soporte",
     "authors": [
         {
@@ -14,6 +14,7 @@
         ]
     },
     "require-dev": {
+        "phpdocumentor/phpdocumentor": "2.*",
         "phpunit/phpunit": "^8"
     }
 }
