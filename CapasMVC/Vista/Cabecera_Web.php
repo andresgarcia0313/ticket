@@ -19,9 +19,10 @@
     </div>
     <?php
     session_start();
-    if (!isset($_SESSION['usuario'])) {
+    if (isset($_SESSION)) {
+    }else{
         if ($_SERVER['REQUEST_URI'] != "/ticket/index.php") {
-            header("location: index.php");
+            header("location: ../../index.php");
         }
     }
     ?>

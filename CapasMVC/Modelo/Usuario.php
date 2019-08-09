@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Archivo de class o molde para los objetos Usuario
  *
@@ -30,6 +31,7 @@
  * documentados en el documento a nivel de página.
  */
 include_once 'BaseDeDatos.php';
+
 /**
  * Corta descripsiòn para la clase: Gestiòn de informaciòn de usuarios
  *
@@ -46,22 +48,30 @@ include_once 'BaseDeDatos.php';
  * @since      Archivo disponible desde la versión 0.01
  * @deprecated File deprecated in Release 2.0.0
  */
-class Usuario {
+class Usuario
+{
 
     /** @var string <p>Correo</p> */
     private $correo;
 
     /** @var string <p>Clave</p> */
     private $clave;
-    public function __construct($correo, $clave) {
+
+    public function __construct($correo, $clave)
+    {
         $this->correo = $correo;
         $this->clave = $clave;
     }
-    public function iniciarSesion() {
-        $this->clave;
-        $this->correo;
-        $ObjBD = new BaseDeDatos("SELECT correo, clave FROM Usuario WHERE correo='$this->correo' AND clave='$this->clave';");
-        return count($ObjBD->getarrayresultadonum());
-        
+
+    public function existe()
+    {
+        $objBaseDeDatos = new BaseDeDatos("SELECT correo, clave FROM Usuario WHERE correo='$this->correo' AND clave='$this->clave';");
+        if ($objBaseDeDatos->getConteoDeRegistros() > 0) {
+            return TRUE;
+        } else {
+            return FALSE;
+        }
     }
+
 }
+

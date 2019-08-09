@@ -1,17 +1,23 @@
 <?php
 include_once '../Modelo/Usuario.php';
-/**
- * @var Usuario Description:Almacena los datos de usuario
- */
-$ObjUsuario = new Usuario(filter_input(INPUT_POST,'correo'),filter_input(INPUT_POST,'clave'));
-echo "Alto";
+$correo=filter_input(INPUT_POST,'correo');
+$clave=filter_input(INPUT_POST,'clave');
+$ObjUsuarioModelo = new Usuario($correo, $clave);
+if ($ObjUsuarioModelo->existe()){
+    session_start();
+    $_SESSION['correo']=$correo;
+    header("location: ../Vista/Casa.php");
+    
+}else{
+    echo "<div><center>Contraseña o Cuenta Incorrecta Por favor Intente Nuevamente</center></div>";
+    include_once '../Vista/Pie_De_Pagina.php';
+    if(isset($_SESSION)){
+        session_destroy();
+    }
+}
 /*
 session_start();
 $_SESSION['usuario'] = $this->correo;
-header("location: interfazinicio.php");
 } else {
-echo "<center>Contraseña o Cuenta Incorrecta</center>";
-if(isset($_SESSION)){
-    session_destroy();
-}
+
 };*/
