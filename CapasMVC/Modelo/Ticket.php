@@ -1,29 +1,30 @@
 <?php
 
 /**
- * Archivo de class o molde para los ticket
+ * Breve descripción Para El Archivo: Clase modelo de ticket
  *
- * Este archivo contrendra los atributos y metodos del ticket 
+ * Descripción larga para el archivo :Este archivo contendrá los atributos y 
+ * métodos del ticket 
  *
  * PHP version 7
  *
  * LICENSE: Este archivo fuente está sujeto a la versión 0.01 de la licencia de 
- * Andres Eduardo Garcia Marquez que está disponible a través de Internet en el 
+ * Andrés Eduardo García Márquez que está disponible a través de Internet en el 
  * siguiente URL: http://www.andresgarcia.xyz Si no recibió una copia de la
- * licencia de Andres Eduardo Garcia Marquez y no puede obtenerla a través de 
+ * licencia de Andrés Eduardo García Márquez y no puede obtenerla a través de 
  * la web, envíe una nota a andresgarcia0313@gmail.com para que podamos 
  * enviarle una copia.
  *
  * @category   Ticket
  * @package    Modelo
  * @author     Andres Eduardo Garcia Marquez <andresgarcia0313@gmail.com>
- * @copyright  2019 The Andres Eduardo Garcia Marquez Group
- * @license    http://www.andresgarcia.xyz Andres Garcia License 0.01
+ * @copyright  2019 Grupo Andrés Eduardo García Márquez
+ * @license    http://www.andresgarcia.xyz Andrés García licencia 0.01
  * @version    GIT: $Id$
  * @link       http://www.andresgarcia.xyz
  * @see        Clase de base de datos
  * @since      Archivo disponible desde la versión 0.01
- * @deprecated File deprecated in Release 2.0.0
+ * @deprecated Archivo en desuso en versión 2.0.0
  */
 /*
  * A continuaciòn incluir aquì, las constante define y $ _GLOBAL Asegúrese de 
@@ -33,20 +34,20 @@
 require_once '../Modelo/BaseDeDatos.php';
 
 /**
- * Corta descripsiòn para la clase: Gestiòn de informaciòn de tickets
+ * Corta descripción para la clase: gestión de información de ticket's
  *
- * Larga descripsiòn para la clase: Gestiòn de informaciòn de tickets
+ * Larga descripción para la clase: gestión de información de ticket's
  *
- * @category   Class
+ * @category   Clases
  * @package    Modelo
  * @author     Andres Eduardo Garcia Marquez <andresgarcia0313@gmail.com>
- * @copyright  2019 The Andres Eduardo Garcia Marquez Group
- * @license    http://www.andresgarcia.xyz Andres Garcia License 0.01
+ * @copyright  2019 El grupo Andrés Eduardo García Márquez
+ * @license    http://www.andresgarcia.xyz Andrés García licencia 0.01
  * @version    Release: @package_version@
  * @link       http://www.andresgarcia.xyz
  * @see        Clase de base de datos
  * @since      Archivo disponible desde la versión 0.01
- * @deprecated File deprecated in Release 2.0.0
+ * @deprecated Clase en desuso en versión 2.0.0
  */
 class Ticket
 {
@@ -55,7 +56,7 @@ class Ticket
     /**
      * ID Es el identificador del ticket
      * 
-     * @var integer <p>id del ticket</p> 
+     * @var int <p>id del ticket</p> 
      */
     private $_id;
 
@@ -151,7 +152,7 @@ class Ticket
      * 
      * @param array $datosTicket Arreglo Con Datos Del Ticket
      */
-    public function __construct($datosTicket = NULL)
+    public function __construct($datosTicket = null)
     {
         $this->_central = $datosTicket['_central'];
         $this->_nombresSolicitante = $datosTicket['_nombresSolicitante'];
@@ -164,246 +165,6 @@ class Ticket
         $this->_tipoTicket = $datosTicket['_tipoTicket'];
         $this->_solicitud = $datosTicket['_solicitud'];
         $this->_incidencia = $datosTicket['_incidencia'];
-    }
-
-    /**
-     * Obtener Variable Del Objeto
-     * 
-     * @return integer
-     */
-    function get_id()
-    {
-        return $this->_id;
-    }
-
-    /**
-     * Obtener Variable Del Objeto
-     * 
-     * @return string
-     */
-    function get_central()
-    {
-        return $this->_central;
-    }
-
-    /**
-     * Obtener Variable Del Objeto
-     * 
-     * @return type
-     */
-    function get_nombresSolicitante()
-    {
-        return $this->_nombresSolicitante;
-    }
-
-    /**
-     * Obtener Variable Del Objeto
-     * 
-     * @return type
-     */
-    function get_apellidosSolicitante()
-    {
-        return $this->_apellidosSolicitante;
-    }
-
-    /**
-     * Obtener Variable Del Objeto
-     * 
-     * @return type
-     */
-    function get_telefonoFijo()
-    {
-        return $this->_telefonoFijo;
-    }
-
-    /**
-     * Obtener Variable Del Objeto
-     * 
-     * @return type
-     */
-    function get_telefonoFijoExt()
-    {
-        return $this->_telefonoFijoExt;
-    }
-
-    /**
-     * Obtener Variable Del Objeto
-     * 
-     * @return type
-     */
-    function get_telefonoMovil()
-    {
-        return $this->_telefonoMovil;
-    }
-
-    /**
-     * Obtener Variable Del Objeto
-     * 
-     * @return type
-     */
-    function get_correo()
-    {
-        return $this->_correo;
-    }
-
-    /**
-     * Obtener Variable Del Objeto
-     * 
-     * @return type
-     */
-    function get_medidor()
-    {
-        return $this->_medidor;
-    }
-
-    /**
-     * Obtener Variable Del Objeto
-     * 
-     * @return type
-     */
-    function get_tipoTicket()
-    {
-        return $this->_tipoTicket;
-    }
-
-    /**
-     * Obtener Variable Del Objeto
-     * 
-     * @return type
-     */
-    function get_solicitud()
-    {
-        return $this->_solicitud;
-    }
-
-    /**
-     * Obtener Variable Del Objeto
-     * 
-     * @return type
-     */
-    function get_incidencia()
-    {
-        return $this->_incidencia;
-    }
-
-    /**
-     * Establecer Variable Del Objeto
-     * 
-     * @param type $_id
-     */
-    function set_id($_id)
-    {
-        $this->_id = $_id;
-    }
-
-    /**
-     * Establecer Variable Del Objeto
-     * 
-     * @param type $_central
-     */
-    function set_central($_central)
-    {
-        $this->_central = $_central;
-    }
-
-    /**
-     * Establecer Variable Del Objeto
-     * 
-     * @param type $_nombresSolicitante
-     */
-    function set_nombresSolicitante($_nombresSolicitante)
-    {
-        $this->_nombresSolicitante = $_nombresSolicitante;
-    }
-
-    /**
-     * Establecer Variable Del Objeto
-     * 
-     * @param type $_apellidosSolicitante
-     */
-    function set_apellidosSolicitante($_apellidosSolicitante)
-    {
-        $this->_apellidosSolicitante = $_apellidosSolicitante;
-    }
-
-    /**
-     * Establecer Variable Del Objeto
-     * 
-     * @param type $_telefonoFijo
-     */
-    function set_telefonoFijo($_telefonoFijo)
-    {
-        $this->_telefonoFijo = $_telefonoFijo;
-    }
-
-    /**
-     * Establecer Variable Del Objeto
-     * 
-     * @param type $_telefonoFijoExt
-     */
-    function set_telefonoFijoExt($_telefonoFijoExt)
-    {
-        $this->_telefonoFijoExt = $_telefonoFijoExt;
-    }
-
-    /**
-     * Establecer Variable Del Objeto
-     * 
-     * @param type $_telefonoMovil
-     */
-    function set_telefonoMovil($_telefonoMovil)
-    {
-        $this->_telefonoMovil = $_telefonoMovil;
-    }
-
-    /**
-     * Establecer Variable Del Objeto
-     * 
-     * @param type $_correo
-     */
-    function set_correo($_correo)
-    {
-        $this->_correo = $_correo;
-    }
-
-    /**
-     * Establecer Variable Del Objeto
-     * 
-     * @param type $_medidor
-     */
-    function set_medidor($_medidor)
-    {
-        $this->_medidor = $_medidor;
-    }
-
-    /**
-     * Establecer Variable Del Objeto
-     * 
-     * @param type $_tipoTicket
-     */
-    function set_tipoTicket($_tipoTicket)
-    {
-        $this->_tipoTicket = $_tipoTicket;
-    }
-
-    /**
-     * Establecer Variable Del Objeto
-     * 
-     * @param type $_solicitud
-     */
-    function set_solicitud($_solicitud)
-    {
-        $this->_solicitud = $_solicitud;
-    }
-
-    /**
-     * Establecer Variable Del Objeto
-     * 
-     * @param type $_incidencia
-     */
-    function set_incidencia($_incidencia)
-    {
-        $this->_incidencia = $_incidencia;
     }
 
     /**
@@ -428,13 +189,14 @@ class Ticket
                 . "'$this->_nombresSolicitante', '$this->_apellidosSolicitante', "
                 . "'$this->_telefonoFijo', '$this->_telefonoFijoExt', "
                 . "'$this->_telefonoMovil', '$this->_correo');";
+
         $objdb = new BaseDeDatos($sql);
         unset($objdb);
         header("location: interfazTicketLista.php");
     }
 
     /**
-     * Leer la informaciòn del ticket
+     * Leer la información del ticket
      * 
      * @param string $sql Consulta en formato sql
      * 
@@ -447,9 +209,11 @@ class Ticket
     }
 
     /**
-     * Cierra el ticke creando la fecha de cierre en el registro
+     * Cerrar el boleto de soporte almacena el momento de solicitud de cierre
      * 
-     * @param type $id
+     * @param int $id Identificador numérico del boleto de soporte.
+     * 
+     * @return boolean Resultado de la modificación.
      */
     public function cerrarTicket($id)
     {
@@ -459,11 +223,268 @@ class Ticket
         return $objdb->query($sql);
     }
 
-}
+    /**
+     * Obtiene la propiedad
+     * 
+     * @return string
+     */
+    function getId()
+    {
+        return $this->_id;
+    }
 
-/*
- * Test ejecución cerrarTicket
-echo "Hola Mundo<p>";
-$objTicket = new Ticket();
-$objTicket->cerrarTicket(11);
-*/
+    /**
+     * Obtiene la propiedad
+     * 
+     * @return string
+     */
+    function getCentral()
+    {
+        return $this->_central;
+    }
+
+    /**
+     * Obtiene la propiedad
+     * 
+     * @return string
+     */
+    function getNombresSolicitante()
+    {
+        return $this->_nombresSolicitante;
+    }
+
+    /**
+     * Obtiene la propiedad
+     * 
+     * @return string
+     */
+    function getApellidosSolicitante()
+    {
+        return $this->_apellidosSolicitante;
+    }
+
+    /**
+     * Obtiene la propiedad
+     * 
+     * @return int
+     */
+    function getTelefonoFijo()
+    {
+        return $this->_telefonoFijo;
+    }
+
+    /**
+     * Obtiene la propiedad
+     * 
+     * @return int
+     */
+    function getTelefonoFijoExt()
+    {
+        return $this->_telefonoFijoExt;
+    }
+
+    /**
+     * Obtiene la propiedad
+     * 
+     * @return int
+     */
+    function getTelefonoMovil()
+    {
+        return $this->_telefonoMovil;
+    }
+
+    /**
+     * Obtiene la propiedad
+     * 
+     * @return string
+     */
+    function getCorreo()
+    {
+        return $this->_correo;
+    }
+
+    /**
+     * Obtiene la propiedad
+     * 
+     * @return string
+     */
+    function getMedidor()
+    {
+        return $this->_medidor;
+    }
+
+    /**
+     * Obtiene la propiedad
+     * 
+     * @return string
+     */
+    function getTipoTicket()
+    {
+        return $this->_tipoTicket;
+    }
+
+    /**
+     * Obtiene la propiedad
+     * 
+     * @return string
+     */
+    function getSolicitud()
+    {
+        return $this->_solicitud;
+    }
+
+    /**
+     * Obtiene la propiedad
+     * 
+     * @return string
+     */
+    function getIncidencia()
+    {
+        return $this->_incidencia;
+    }
+
+    /**
+     * Establece el identificador del boleto de soporte
+     * 
+     * @param int $id Establece el identificador del boleto de soporte
+     * 
+     * @return void
+     */
+    function setId($id)
+    {
+        $this->_id = $id;
+    }
+
+    /**
+     * Establece la propiedad
+     * 
+     * @param string $central Propiedad
+     * 
+     * @return void
+     */
+    function setCentral($central)
+    {
+        $this->_central = $central;
+    }
+
+    /**
+     * Establece la propiedad
+     * 
+     * @param string $nombresSolicitante Propiedad
+     * 
+     * @return void
+     */
+    function setNombresSolicitante($nombresSolicitante)
+    {
+        $this->_nombresSolicitante = $nombresSolicitante;
+    }
+
+    /**
+     * Establece la propiedad
+     * 
+     * @param string $apellidosSolicitante Propiedad
+     * 
+     * @return void
+     */
+    function setApellidosSolicitante($apellidosSolicitante)
+    {
+        $this->_apellidosSolicitante = $apellidosSolicitante;
+    }
+
+    /**
+     * Establece la propiedad
+     * 
+     * @param int $telefonoFijo Propiedad
+     * 
+     * @return void
+     */
+    function setTelefonoFijo($telefonoFijo)
+    {
+        $this->_telefonoFijo = $telefonoFijo;
+    }
+
+    /**
+     * Establece la propiedad
+     * 
+     * @param int $telefonoFijoExt Propiedad
+     * 
+     * @return void
+     */
+    function setTelefonoFijoExt($telefonoFijoExt)
+    {
+        $this->_telefonoFijoExt = $telefonoFijoExt;
+    }
+
+    /**
+     * Establece la propiedad
+     * 
+     * @param int $telefonoMovil Propiedad
+     * 
+     * @return void
+     */
+    function setTelefonoMovil($telefonoMovil)
+    {
+        $this->_telefonoMovil = $telefonoMovil;
+    }
+
+    /**
+     * Establece la propiedad
+     * 
+     * @param string $correo Propiedad
+     * 
+     * @return void
+     */
+    function setCorreo($correo)
+    {
+        $this->_correo = $correo;
+    }
+
+    /**
+     * Establece la propiedad
+     * 
+     * @param string $medidor Propiedad
+     * 
+     * @return void
+     */
+    function setMedidor($medidor)
+    {
+        $this->_medidor = $medidor;
+    }
+
+    /**
+     * Establece la propiedad
+     * 
+     * @param string $tipoTicket Propiedad
+     * 
+     * @return void
+     */
+    function setTipoTicket($tipoTicket)
+    {
+        $this->_tipoTicket = $tipoTicket;
+    }
+
+    /**
+     * Establece la propiedad
+     * 
+     * @param string $solicitud Propiedad
+     * 
+     * @return void
+     */
+    function setSolicitud($solicitud)
+    {
+        $this->_solicitud = $solicitud;
+    }
+
+    /**
+     * Establece la propiedad
+     * 
+     * @param string $incidencia Propiedad
+     * 
+     * @return void
+     */
+    function setIncidencia($incidencia)
+    {
+        $this->_incidencia = $incidencia;
+    }
+
+}

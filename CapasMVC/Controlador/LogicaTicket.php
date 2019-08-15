@@ -1,13 +1,13 @@
 <?php
-include_once './classTicket.php';
+include_once 'Ticket.php';
 
 $datosFormulario=filter_input_array(INPUT_POST);
 /**
  * @var ticket $objTicket Arreglo el cual se crea con todos los datos del 
  * formulario de interfazTicketCrear.php
  */
-$objTicket= new ticket($datosFormulario);
-$objTicket->guardar();
+$ticket= new ticketControlador($datosFormulario);
+$ticket->guardar();
 
 /*
  *

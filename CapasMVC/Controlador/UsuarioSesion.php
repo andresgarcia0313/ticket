@@ -15,9 +15,3 @@ if ($ObjUsuarioModelo->existe()){
         session_destroy();
     }
 }
-/*
-session_start();
-$_SESSION['usuario'] = $this->correo;
-} else {
-
-};*/

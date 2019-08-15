@@ -1,3 +1,30 @@
+Al instalar netbeans
+Desactivar git security para https para que netbeans funcione con esto
+     ~<user>\.giconfig agregar:
+        [core]
+                editor = \"C:\\Users\\agarcia220\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe\" --wait
+        [user]
+                name = Andres Eduardo Garcia Marquez
+                email = andresgarcia0313@gmail.com
+        [credential]
+                helper = store
+        [gui]
+                recentrepo = C:/xampp/htdocs/ticket
+        [winUpdater]
+                recentlySeenVersion = 2.22.0.windows.1
+        [cola]
+                spellcheck = true
+        [http]
+                sslVerify = false
+
+Instalar Composer 
+Cambiar notas de cabecera para archivos nuevos en netbeans
+Cambiar Menús y agregar complemento GIT
+Instalar SpellChecker en español
+Agregar plantillas de acuerdo a https://pear.php.net/manual/en/standards.sample.php y header 
+
+
+
 Ruta Global de composer la cual se debe agregar al path
 C:\Users\agarcia220\AppData\Roaming\Composer\vendor
 Posibles Comandos Para Instalar
@@ -15,8 +42,40 @@ $ composer global require "phpdocumentor/phpdocumentor:2.*"
 Desinstalar 
 
 
+Adecuar VPN
+Adecuar Servidor redmine
+Adecuar tareas en equipo
+https://docs.oracle.com/cd/E50453_01/doc.80/e50452/dev_apps_collab.htm#NBDAG348
 Referencias
     https://akrabat.com/global-installation-of-php-tools-with-composer/
     https://getcomposer.org/doc/03-cli.md#global
     https://www.rephp.com/como-eliminar-globalmente-un-paquete-de-composer.html
     https://docs.phpdoc.org/getting-started/installing.html
+    Manual Netbeans https://docs.oracle.com/netbeans/nb82/netbeans/index.html
+Metodo de trabajo
+    Analisis 
+        Crear requerimiento
+        Crear Historia
+        Crear Actividad En Tareas De IDE
+    Diseño
+        UML
+            Clases
+            Actividad
+    Ejecuciòn
+        TDD
+        Creaciòn de pruebas unitarias 
+            Modelo
+            Controlador
+            Lògica
+            Interfaz (selenium)
+      Creaciòn de clase
+            Creaciòn de metodo
+    Entrega
+        Lecciones aprendidas
+        Implementaciòn de lecciones aprenddas
+Requerimiento
+    LIstar Ticketes
+
+Apoyo de código 
+Namespace y autoloader de clases
+https://www.youtube.com/watch?v=7ETYvGi4m18

@@ -1,10 +1,31 @@
-<?php include_once 'CapasMVC/Vista/Cabecera_Web.php'; ?>
-<div style="text-align: center;">
-    <h1>Ticket Platform</h1>
-    <form action="CapasMVC/Controlador/UsuarioSesion.php" method="post">
-        <p><input name="correo" placeholder="Ingrese Nombre" type="text"></p>
-        <p><input name="clave" placeholder="Ingrese Clave" type="password"></p>
-        <input value="Acceder" type="submit">
-    </form>
-</div>
-<?php include_once 'CapasMVC/Vista/Pie_De_Pagina.php'; ?>
+<!DOCTYPE html>
+<!--
+Copyright 2019 agarcia220.
+
+Licencia propietaria(the "License");
+No puede usar este archivo, excepto cumplimiento con la licencia
+Puede obtener una copia de la licencia en
+
+     http://www.andresgarcia.xyz
+
+A menos que sea requerido por la ley aplicable o acordado por escrito, software
+distribuido bajo la licencia se distribuye "TALCUAL",
+SIN GARANTÍAS O CONDICIONES DE NINGÚN TIPO, expresas o implícitas.
+Consulte la Licencia para el idioma específico que rige los permisos y 
+las limitaciones de la Licencia
+Todos los derechos reservados ©
+www.andresgarcia.xyz
+-->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+    </head>
+    <body>
+        <?php
+        $myArgvGet=filter_input($_GET);
+        var_dump($myArgvGet);
+        header('location: CapasMVC/Vista/IniciarSesion.php');
+        ?>
+    </body>
+</html>

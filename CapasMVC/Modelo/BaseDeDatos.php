@@ -1,18 +1,62 @@
 <?php
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- * Los terminos de licencia serán definidos por el propietario o futuro comprador de este código
- */
+/* vim: set expandtab tabstop=4 shiftwidth=4 softtabstop=4: */
 
 /**
- * Description of BaseDeDatos
- * La misión de está clase es tratar los metodos de conexión para todo el sistema
+ * Short description for file
+ *
+ * Long description for file (if any)...
+ *
+ * PHP version 5
+ *
+ * LICENSE: This source file is subject to version 3.01 of the PHP license
+ * that is available through the world-wide-web at the following URI:
+ * http://www.php.net/license/3_01.txt.  If you did not receive a copy of
+ * the PHP License and are unable to obtain it through the web, please
+ * send a note to license@php.net so we can mail you a copy immediately.
+ *
+ * @category   CategoryName
+ * @package    PackageName
+ * @author     Original Author <author@example.com>
+ * @author     Another Author <another@example.com>
+ * @copyright  1997-2005 The PHP Group
+ * @license    http://www.php.net/license/3_01.txt  PHP License 3.01
+ * @version    SVN: $Id$
+ * @link       http://pear.php.net/package/PackageName
+ * @see        NetOther, Net_Sample::Net_Sample()
+ * @since      File available since Release 1.2.0
+ * @deprecated File deprecated in Release 2.0.0
+ */
+/**
+ * This is a "Docblock Comment," also known as a "docblock."  The class'
+ * docblock, below, contains a complete description of how to write these.
+ */
+//require_once 'PEAR.php';
+// {{{ constants
+
+/**
+ * Methods return this if they succeed
+ */
+//define('NET_SAMPLE_OK', 1);
+// }}}
+// {{{ GLOBALS
+
+/**
+ * The number of objects created
+ * @global int $GLOBALS['_NET_SAMPLE_Count']
+ */
+//$GLOBALS['_NET_SAMPLE_Count'] = 0;
+// }}}
+
+/**
+ * Descripción de BaseDeDatos
+ * Esta clase facilita funciones de datos comunes para ser heredada a los 
+ * distintas clases que representan entidades en la base de datos.
+ * 
+ * sistema
  * @author andresgarcia0313@gmail.com
  */
-class BaseDeDatos extends mysqli
+class BaseDeDatos
 {
 
     /** @var string <p>Dirección del Servidor o Ip</p> */
@@ -38,17 +82,20 @@ class BaseDeDatos extends mysqli
 
     /** @var array <p>Datos de la transformación de mysqli_result asociativo y 
      * numerico</p> */
-    private $arrayResultadoAmbos;
+    private $resultadoArrayAmbos;
 
     /** @var array <p>Datos de la transformación de mysqli_result a array tipo 
      * numerico</p> */
-    private $arrayResultadoNumerico;
+    private $resultadoArrayNumerico;
 
     /** @var array <p>Cantidad de registros al realizar un select</p> */
     private $conteoDeRegistros;
 
     /** @var string <p>Consulta en formato sql */
     private $sql;
+
+    /** @var mysqli $conexion Conexión con el Gestor de Base De Datos */
+    private $conexion;
 
     /**
      * Abre nueva conexión al servidor MariaDB y utilizar Consultar si se le 
@@ -61,13 +108,20 @@ class BaseDeDatos extends mysqli
      */
     function __construct($sql = NULL)
     {
-        parent::__construct($this->hospedador, $this->usuario, $this->clave, $this->baseDeDatos, $this->puerto, $this->enchufe);
-        parent::set_charset("utf8");
         $this->sql = $sql;
-        if ($this->sql == NULL) {
-        }else{            
-            $this->consultar($this->sql);
+        if ($sql != NULL) {
+            $this->consultar($sql);
         }
+        $this->conectar();
+    }
+
+    function conectar()
+    {
+        $this->conexion = new mysqli($this->hospedador, $this->usuario, $this->clave, $this->baseDeDatos, $this->puerto, $this->enchufe);
+        if ($this->conexion->connect_errno != 0) {
+            echo "Sin conectar al Gestor De Base De Datos: " . $this->conexion->connect_error;
+        }
+        $this->conexion->set_charset("utf8");
     }
 
     /**
@@ -79,58 +133,40 @@ class BaseDeDatos extends mysqli
      */
     function consultar($sql)
     {
-        $this->sql = $sql;
-        $this->objMysqliResult = $this->query($this->sql);
-        $tipoConsulta = substr($this->sql, 0, 6);
-        switch ($tipoConsulta) {
-            case "INSERT":
-                echo "INSERT";
-                $this->close();
-                return void;
-                break;
+        switch (strtoupper(substr($sql, 0, 6))) {
             case "SELECT":
-                $this->arrayResultadoAmbos = $this->objMysqliResult->fetch_all(MYSQLI_BOTH);
-                $countY = count($this->arrayResultadoAmbos);
-                if($countY>0){
-                for ($y = 0; $y < $countY; $y++) {
-                    $countX = count($this->arrayResultadoAmbos[$y]) / 2;
-                    $fila = $this->arrayResultadoAmbos[$y];
-                    for ($x = 0; $x < $countX; $x++) {
-                        $array[$y][$x] = $fila[$x];
-                    }
-                }
-                $this->arrayResultadoNumerico = $array;
-                $this->conteoDeRegistros = count($array);
-                }
-                $this->close();
-                return $this->arrayResultadoAmbos;
+                return $this->resultadoArrayAmbos = $this->conexion->query($sql)->fetch_all(MYSQLI_BOTH);
                 break;
-            case "UPDATE":
-                echo "UPDATE";
-                $this->close();
-                break;
-            case "DELETE":
-                echo "DELETE";
-                $this->close();
-                break;
+            default:
+                echo "No es SELECT";
         }
-        $this->close();
+        $this->conexion->close();
+    }
+
+    /**
+     * Permite retornar los titulos de los campos de una tabla para bases de 
+     * datos mysql 
+     * 
+     * @param string $tabla nombre de la tabla a consultar sus titulos de campos
+     * @return array $titulosCampos
+     */
+    function titulosCampos($tabla)
+    {
+        $this->consultar("select COLUMN_NAME from INFORMATION_SCHEMA.COLUMNS where TABLE_NAME = '" . $tabla . "';");
+        return $this->getArrayResultadoNumerico();
     }
 
     /**
      * Obtener el resultado de consulta SQL en formato array numerico.
      * @return array <p>Retorna Array PHP Numerico del select realizado</p>
      */
-    function validarConexión()
+    function validarConexion()
     {
         try {
-            $return = parent::__construct($this->hospedador, $this->usuario, $this->clave, $this->baseDeDatos, $this->puerto, $this->enchufe);
-            if ($return == 0) {
-                throw new Exception("Se Deja De Tener Conexión A Base De Datos");
-            }
-            if ($this->sql == null) {
-                $this->consultar("SELECT 'Conectado a DB' AS mensaje FROM DUAL");
-            }
+            echo '<p>Validando conexión</p>';
+            $resultado = $this->consultar("SELECT 'Conectado a DB' AS mensaje FROM DUAL");
+            $this->getArrayResultadoNumerico();
+            var_dump($this);
         } catch (Exception $e) {
             echo 'Excepción: ', $e->getMessage(), "\n";
         }
@@ -173,12 +209,18 @@ class BaseDeDatos extends mysqli
 
     function getArrayResultadoAmbos()
     {
-        return $this->arrayResultadoAmbos;
+        return $this->resultadoArrayAmbos;
     }
 
     function getArrayResultadoNumerico()
     {
-        return $this->arrayResultadoNumerico;
+        if (count($this->resultadoArrayAmbos) > 0) {
+            for ($y = 0; $y < count($this->resultadoArrayAmbos); $y++)
+                for ($x = 0; $x < count($this->resultadoArrayAmbos[$y]) / 2; $x++)
+                    $this->resultadoArrayNumerico[$y][$x] = $this->resultadoArrayAmbos[$y][$x];
+            $this->conteoDeRegistros = count($this->resultadoArrayNumerico);
+        }
+        return $this->resultadoArrayNumerico;
     }
 
     function getSql()
@@ -223,12 +265,12 @@ class BaseDeDatos extends mysqli
 
     function setArrayResultadoAmbos($arrayResultadoAmbos)
     {
-        $this->arrayResultadoAmbos = $arrayResultadoAmbos;
+        $this->resultadoArrayAmbos = $arrayResultadoAmbos;
     }
 
     function setArrayResultadoNumerico($arrayResultadoNumerico)
     {
-        $this->arrayResultadoNumerico = $arrayResultadoNumerico;
+        $this->resultadoArrayNumerico = $arrayResultadoNumerico;
     }
 
     function setSql($sql)
@@ -247,11 +289,3 @@ class BaseDeDatos extends mysqli
     }
 
 }
-
-//Codigo para comprobar si existe
-/*
-$objBaseDeDatos = new BaseDeDatos();
-$sql = "SELECT correo, clave FROM Usuario WHERE correo='andresgarcia0313@gmail.com' AND clave='7104'";
-$objBaseDeDatos->consultar($sql);
-($objBaseDeDatos->getConteoDeRegistros());
-*/
