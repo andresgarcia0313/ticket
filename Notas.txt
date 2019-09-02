@@ -1,4 +1,6 @@
 Al instalar netbeans
+Instalar Git
+	git config --global sslVerify false
 Desactivar git security para https para que netbeans funcione con esto
      ~<user>\.giconfig agregar:
         [core]
